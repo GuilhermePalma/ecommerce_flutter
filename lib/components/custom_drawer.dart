@@ -19,13 +19,22 @@ class CustomDrawer extends StatelessWidget {
                 onPressed: () {
                   Navigator.pop(context);
                 },
-                icon: const Icon(Icons.close_rounded),
+                icon: const Icon(
+                  Icons.close_rounded,
+                  color: Color.fromRGBO(182, 188, 200, 1),
+                ),
               ),
             ),
           ),
           ...listCategories
-              .map((e) => ListTile(
-                    title: Text(e),
+              .map((itemDrawer) => ListTile(
+                    title: Text(
+                      itemDrawer,
+                      style: Theme.of(context)
+                          .textTheme
+                          .headline6!
+                          .copyWith(fontSize: 17),
+                    ),
                   ))
               .toList(),
         ],
