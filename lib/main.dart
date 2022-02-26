@@ -1,4 +1,6 @@
 import 'package:ecommerce_product/components/custom_drawer.dart';
+import 'package:ecommerce_product/data/dummy_data.dart';
+import 'package:ecommerce_product/screens/product_details.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(const MyApp());
@@ -43,6 +45,7 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: const Text("sneakers"),
           actions: const [
+            // Icones do Menu Superior
             Padding(
               padding: EdgeInsets.only(left: 16, right: 20),
               child: Icon(Icons.shopping_cart_outlined),
@@ -55,9 +58,7 @@ class MyApp extends StatelessWidget {
           ],
         ),
         drawer: const CustomDrawer(),
-        body: const Center(
-          child: Text("Ecommerce Page Initial"),
-        ),
+        body: ProductDetails(productShow: dummyProduct),
       ),
     );
   }
