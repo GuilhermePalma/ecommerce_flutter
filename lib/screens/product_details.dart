@@ -1,4 +1,5 @@
 import 'package:ecommerce_product/components/carousel_images.dart';
+import 'package:ecommerce_product/components/input_quantity.dart';
 import 'package:ecommerce_product/models/product.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -49,12 +50,8 @@ class ProductDetails extends StatelessWidget {
             Text(productShow.price.toStringAsFixed(2)),
           ],
         ),
-        Container(
-          margin: const EdgeInsets.only(top: 16, bottom: 16),
-          color: Colors.grey[200],
-          height: 60,
-          width: double.infinity,
-        ),
+        // TODO: Integrar Função que Obtenha a Quantidade de Itens
+        const InputQuantity(),
         SizedBox(
           width: double.infinity,
           child: CupertinoButton.filled(
