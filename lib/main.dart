@@ -24,9 +24,10 @@ class MyApp extends StatelessWidget {
         fontFamily: "KumbhSans",
         textTheme: ThemeData.light().textTheme.copyWith(
               headline6: const TextStyle(
-                  fontFamily: "KumbhSans",
-                  fontWeight: FontWeight.bold,
-                  fontSize: 22),
+                fontFamily: "KumbhSans",
+                fontWeight: FontWeight.bold,
+                fontSize: 25,
+              ),
             ),
         appBarTheme: AppBarTheme.of(context).copyWith(
           foregroundColor: const Color.fromRGBO(29, 32, 37, 1),
