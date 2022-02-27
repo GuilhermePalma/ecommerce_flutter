@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class CustomArrowButton extends StatelessWidget {
@@ -17,13 +16,13 @@ class CustomArrowButton extends StatelessWidget {
       onPressed: onClick,
       child: Icon(
         iconShow,
-        color: Colors.black,
+        color: const Color.fromRGBO(29, 32, 37, 1),
       ),
       style: ElevatedButton.styleFrom(
         primary: Colors.white,
         onPrimary: Colors.grey,
         shape: const CircleBorder(),
-        padding: const EdgeInsets.all(10),
+        padding: const EdgeInsets.all(8),
       ),
     );
   }

@@ -63,7 +63,10 @@ class ProductDetails extends StatelessWidget {
                   padding: EdgeInsets.only(right: 12),
                   child: Icon(Icons.shopping_cart_outlined),
                 ),
-                Text("Add to cart"),
+                Text(
+                  "Add to cart",
+                  style: TextStyle(fontWeight: FontWeight.w700),
+                ),
               ],
             ),
             // TODO: adicionar Função no Botão
