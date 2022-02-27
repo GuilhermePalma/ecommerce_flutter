@@ -16,5 +16,10 @@ final Product dummyProduct = Product(
   price: 250.00,
   currency: "\$",
   percentageDiscount: 50,
-  pathImages: [""],
+  pathImages: [
+    "assets/images/dummy_product/image-product-1.jpg",
+    "assets/images/dummy_product/image-product-2.jpg",
+    "assets/images/dummy_product/image-product-3.jpg",
+    "assets/images/dummy_product/image-product-4.jpg",
+  ],
 );
