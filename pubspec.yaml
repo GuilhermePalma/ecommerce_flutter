@@ -64,6 +64,7 @@ flutter:
     - assets/images/dummy_product/image-product-3.jpg
     - assets/images/dummy_product/image-product-4.jpg
     - assets/images/error_404.jpg
+    - assets/images/image-avatar.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

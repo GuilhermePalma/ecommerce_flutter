@@ -44,16 +44,25 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         appBar: AppBar(
           title: const Text("sneakers"),
-          actions: const [
+          actions: [
             // Icones do Menu Superior
-            Padding(
+            const Padding(
               padding: EdgeInsets.only(left: 16, right: 20),
               child: Icon(Icons.shopping_cart_outlined),
             ),
             Padding(
-              // TODO: Mudar para uma Foto de Perfil Redonda
-              padding: EdgeInsets.only(right: 24),
-              child: Icon(Icons.people),
+              padding: const EdgeInsets.only(right: 24),
+              child: InkWell(
+                onTap: () {
+                  // TODO: Criar uma Tela para o Perfil
+                  print("Click in Profile Pick");
+                },
+                child: Image.asset(
+                  "assets/images/image-avatar.png",
+                  height: 30,
+                  width: 30,
+                ),
+              ),
             ),
           ],
         ),
