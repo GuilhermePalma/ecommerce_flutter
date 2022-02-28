@@ -4,12 +4,14 @@ import 'package:ecommerce_product/models/product.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class ProductDetails extends StatelessWidget {
+class ProductDetailsScreen extends StatelessWidget {
   final Product productShow;
+  final void Function(Product) addProductToCart;
 
-  const ProductDetails({
+  const ProductDetailsScreen({
     Key? key,
     required this.productShow,
+    required this.addProductToCart,
   }) : super(key: key);
 
   @override
@@ -136,8 +138,7 @@ class ProductDetails extends StatelessWidget {
                 ),
               ],
             ),
-            // TODO: adicionar Função no Botão
-            onPressed: () {},
+            onPressed: () => addProductToCart(productShow),
           ),
         ),
       ],
