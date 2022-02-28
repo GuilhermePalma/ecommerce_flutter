@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 
 class ProductDetails extends StatelessWidget {
   final Product productShow;
+
   const ProductDetails({
     Key? key,
     required this.productShow,
@@ -29,17 +30,17 @@ class ProductDetails extends StatelessWidget {
   /// Retorna um Widget com os Detalhes do Produto Configurado
   Widget _detailsProduct(BuildContext context) {
     // Obtem os Itens utilizados mais de uma vez (Evita chamadas desnecessarias)
-    final Color primaryColor = Theme.of(context).colorScheme.primary;
-    final Color colorSubtitle = Colors.grey[600]!;
-    final TextStyle styleTitle = Theme.of(context).textTheme.headline6!;
+    final Color _primaryColor = Theme.of(context).colorScheme.primary;
+    final Color _colorSubtitle = Colors.grey[600]!;
+    final TextStyle _styleTitle = Theme.of(context).textTheme.headline6!;
 
     // Define o Preço do Produto com Desconto
-    final double finalPrice;
+    final double _finalPrice;
     if (productShow.percentageDiscount > 0 &&
         productShow.percentageDiscount < 100) {
-      finalPrice = (productShow.price * productShow.percentageDiscount) / 100;
+      _finalPrice = (productShow.price * productShow.percentageDiscount) / 100;
     } else {
-      finalPrice = productShow.price;
+      _finalPrice = productShow.price;
     }
 
     return Column(
@@ -49,7 +50,7 @@ class ProductDetails extends StatelessWidget {
           padding: const EdgeInsets.only(bottom: 10),
           child: Text(
             productShow.brand.toUpperCase(),
-            style: styleTitle.copyWith(
+            style: _styleTitle.copyWith(
               fontSize: 13,
               color: Theme.of(context).colorScheme.primary,
             ),
@@ -67,7 +68,7 @@ class ProductDetails extends StatelessWidget {
           child: Text(
             productShow.description,
             style: TextStyle(
-              color: colorSubtitle,
+              color: _colorSubtitle,
               fontFamily: "KumbhSans",
             ),
           ),
@@ -79,14 +80,14 @@ class ProductDetails extends StatelessWidget {
             Row(
               children: [
                 Text(
-                  "${productShow.currency} ${finalPrice.toStringAsFixed(2)}",
-                  style: styleTitle,
+                  "${productShow.currency} ${_finalPrice.toStringAsFixed(2)}",
+                  style: _styleTitle,
                 ),
                 Container(
                   padding:
                       const EdgeInsets.symmetric(vertical: 3, horizontal: 8),
                   decoration: BoxDecoration(
-                    color: primaryColor.withOpacity(0.2),
+                    color: _primaryColor.withOpacity(0.2),
                     borderRadius: const BorderRadius.all(
                       Radius.circular(6),
                     ),
@@ -97,7 +98,7 @@ class ProductDetails extends StatelessWidget {
                     style: TextStyle(
                       fontFamily: "KumbhSans",
                       fontWeight: FontWeight.w700,
-                      color: primaryColor,
+                      color: _primaryColor,
                       fontSize: 14,
                     ),
                   ),
@@ -108,7 +109,7 @@ class ProductDetails extends StatelessWidget {
               "${productShow.currency} ${productShow.price.toStringAsFixed(2)}",
               style: TextStyle(
                 fontFamily: "KumbhSans",
-                color: colorSubtitle,
+                color: _colorSubtitle,
                 decoration: TextDecoration.lineThrough,
                 fontSize: 14,
               ),

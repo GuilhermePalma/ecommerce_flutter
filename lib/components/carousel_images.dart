@@ -14,7 +14,7 @@ class CarouselImages extends StatefulWidget {
 }
 
 class _CarouselImagesState extends State<CarouselImages> {
-  int indexImage = 0;
+  int _indexImage = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +25,7 @@ class _CarouselImagesState extends State<CarouselImages> {
           height: 270,
           width: double.infinity,
           child: Image.asset(
-            widget.listImages.elementAt(indexImage),
+            widget.listImages.elementAt(_indexImage),
             fit: BoxFit.cover,
             errorBuilder: (context, error, stackTrace) {
               // Tratamento de Erro na Imagem
@@ -37,11 +37,11 @@ class _CarouselImagesState extends State<CarouselImages> {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             CustomArrowButton(
-              onClick: () => _clickButtonCarousel(indexImage - 1),
+              onClick: () => _clickButtonCarousel(_indexImage - 1),
               iconShow: Icons.arrow_back_ios_new_rounded,
             ),
             CustomArrowButton(
-              onClick: () => _clickButtonCarousel(indexImage + 1),
+              onClick: () => _clickButtonCarousel(_indexImage + 1),
               iconShow: Icons.arrow_forward_ios_rounded,
             ),
           ],
@@ -55,12 +55,12 @@ class _CarouselImagesState extends State<CarouselImages> {
     setState(() {
       if (newIndex >= widget.listImages.length) {
         // Caso o Index seja maior que a lista, volta para o Primeiro Item
-        indexImage = 0;
+        _indexImage = 0;
       } else if (newIndex < 0) {
         // Caso o Index seja menor que 0 (Anterior ao 1° Item), exibe o Utlimo Item
-        indexImage = widget.listImages.length - 1;
+        _indexImage = widget.listImages.length - 1;
       } else {
-        indexImage = newIndex;
+        _indexImage = newIndex;
       }
     });
   }

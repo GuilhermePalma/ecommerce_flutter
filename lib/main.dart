@@ -9,7 +9,7 @@ void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
   MyApp({Key? key}) : super(key: key);
-  final List<Product> productsCart = [];
+  final List<Product> _productsCart = [];
 
   // This widget is the root of your application.
   @override
@@ -50,7 +50,7 @@ class MyApp extends StatelessWidget {
           title: const Text("sneakers"),
           actions: [
             // Icones do Menu Superior
-            CustomCartIcon(productsCart: productsCart),
+            CustomCartIcon(productsCart: _productsCart),
             Padding(
               padding: const EdgeInsets.only(right: 24),
               child: InkWell(

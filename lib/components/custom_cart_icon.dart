@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 
 class CustomCartIcon extends StatelessWidget {
   final List<Product> productsCart;
+
   const CustomCartIcon({
     Key? key,
     required this.productsCart,
