@@ -1,12 +1,15 @@
+import 'package:ecommerce_product/components/custom_cart_icon.dart';
 import 'package:ecommerce_product/components/custom_drawer.dart';
 import 'package:ecommerce_product/data/dummy_data.dart';
+import 'package:ecommerce_product/models/product.dart';
 import 'package:ecommerce_product/screens/product_details.dart';
 import 'package:flutter/material.dart';
 
-void main() => runApp(const MyApp());
+void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+  MyApp({Key? key}) : super(key: key);
+  final List<Product> productsCart = [];
 
   // This widget is the root of your application.
   @override
@@ -47,10 +50,7 @@ class MyApp extends StatelessWidget {
           title: const Text("sneakers"),
           actions: [
             // Icones do Menu Superior
-            const Padding(
-              padding: EdgeInsets.only(left: 16, right: 20),
-              child: Icon(Icons.shopping_cart_outlined),
-            ),
+            CustomCartIcon(productsCart: productsCart),
             Padding(
               padding: const EdgeInsets.only(right: 24),
               child: InkWell(
