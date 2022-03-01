@@ -10,10 +10,11 @@ class InputQuantity extends StatefulWidget {
 }
 
 class _InputQuantityState extends State<InputQuantity> {
-  int _quantityItems = 0;
+  int _quantityItems = 1;
 
   @override
   Widget build(BuildContext context) {
+    // Obtem o Theme do APP
     final themeApp = Theme.of(context);
 
     return Container(
@@ -31,8 +32,8 @@ class _InputQuantityState extends State<InputQuantity> {
             padding: const EdgeInsets.only(left: 16.0),
             child: InkWell(
               onTap: () =>
-                  setState(() => _quantityItems != 0 ? _quantityItems-- : 0),
-              onLongPress: () => setState(() => _quantityItems = 0),
+                  setState(() => _quantityItems != 1 ? _quantityItems-- : 1),
+              onLongPress: () => setState(() => _quantityItems = 1),
               child: Icon(
                 Icons.remove_rounded,
                 color: themeApp.colorScheme.primary,
