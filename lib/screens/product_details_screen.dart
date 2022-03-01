@@ -36,15 +36,6 @@ class ProductDetailsScreen extends StatelessWidget {
     final Color _colorSubtitle = Colors.grey[600]!;
     final TextStyle _styleTitle = Theme.of(context).textTheme.headline6!;
 
-    // Define o Preço do Produto com Desconto
-    final double _finalPrice;
-    if (productShow.percentageDiscount > 0 &&
-        productShow.percentageDiscount < 100) {
-      _finalPrice = (productShow.price * productShow.percentageDiscount) / 100;
-    } else {
-      _finalPrice = productShow.price;
-    }
-
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -82,7 +73,7 @@ class ProductDetailsScreen extends StatelessWidget {
             Row(
               children: [
                 Text(
-                  "${productShow.currency} ${_finalPrice.toStringAsFixed(2)}",
+                  "${productShow.currency} ${productShow.priceWithDiscount.toStringAsFixed(2)}",
                   style: _styleTitle,
                 ),
                 Container(
