@@ -14,6 +14,8 @@ class _InputQuantityState extends State<InputQuantity> {
 
   @override
   Widget build(BuildContext context) {
+    final themeApp = Theme.of(context);
+
     return Container(
       margin: const EdgeInsets.only(top: 16, bottom: 16),
       decoration: BoxDecoration(
@@ -33,14 +35,13 @@ class _InputQuantityState extends State<InputQuantity> {
               onLongPress: () => setState(() => _quantityItems = 0),
               child: Icon(
                 Icons.remove_rounded,
-                color: Theme.of(context).colorScheme.primary,
+                color: themeApp.colorScheme.primary,
               ),
             ),
           ),
           Text(
             _quantityItems.toString(),
-            style:
-                Theme.of(context).textTheme.headline6!.copyWith(fontSize: 20),
+            style: themeApp.textTheme.headline6!.copyWith(fontSize: 20),
           ),
           Padding(
             padding: const EdgeInsets.only(right: 16.0),
@@ -50,7 +51,7 @@ class _InputQuantityState extends State<InputQuantity> {
               onLongPress: () => setState(() => _quantityItems += 5),
               child: Icon(
                 Icons.add_rounded,
-                color: Theme.of(context).colorScheme.primary,
+                color: themeApp.colorScheme.primary,
               ),
             ),
           ),

@@ -32,9 +32,10 @@ class ProductDetailsScreen extends StatelessWidget {
   /// Retorna um Widget com os Detalhes do Produto Configurado
   Widget _detailsProduct(BuildContext context) {
     // Obtem os Itens utilizados mais de uma vez (Evita chamadas desnecessarias)
-    final Color _primaryColor = Theme.of(context).colorScheme.primary;
+    final themeApp = Theme.of(context);
+    final Color _primaryColor = themeApp.colorScheme.primary;
     final Color _colorSubtitle = Colors.grey[600]!;
-    final TextStyle _styleTitle = Theme.of(context).textTheme.headline6!;
+    final TextStyle _styleTitle = themeApp.textTheme.headline6!;
 
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -45,7 +46,7 @@ class ProductDetailsScreen extends StatelessWidget {
             productShow.brand.toUpperCase(),
             style: _styleTitle.copyWith(
               fontSize: 13,
-              color: Theme.of(context).colorScheme.primary,
+              color: themeApp.colorScheme.primary,
             ),
           ),
         ),
@@ -53,7 +54,7 @@ class ProductDetailsScreen extends StatelessWidget {
           padding: const EdgeInsets.only(bottom: 15),
           child: Text(
             productShow.name,
-            style: Theme.of(context).textTheme.headline6,
+            style: themeApp.textTheme.headline6,
           ),
         ),
         Padding(

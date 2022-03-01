@@ -10,6 +10,8 @@ class ModalCart extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final themeHeadline6 = Theme.of(context).textTheme.headline6;
+
     return Container(
       margin: const EdgeInsets.symmetric(horizontal: 8),
       decoration: const BoxDecoration(
@@ -28,10 +30,7 @@ class ModalCart extends StatelessWidget {
                 alignment: Alignment.centerLeft,
                 child: Text(
                   "Cart",
-                  style: Theme.of(context)
-                      .textTheme
-                      .headline6!
-                      .copyWith(fontSize: 18),
+                  style: themeHeadline6!.copyWith(fontSize: 18),
                 ),
               ),
             ),
@@ -49,10 +48,10 @@ class ModalCart extends StatelessWidget {
                 padding: const EdgeInsets.all(16.0),
                 child: Text(
                   "Your Cart is Empty",
-                  style: Theme.of(context).textTheme.headline6!.copyWith(
-                        fontSize: 20,
-                        color: Colors.grey,
-                      ),
+                  style: themeHeadline6.copyWith(
+                    fontSize: 20,
+                    color: Colors.grey,
+                  ),
                 ),
               ),
             Container(
