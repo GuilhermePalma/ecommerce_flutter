@@ -1,37 +1,35 @@
-# Frontend Mentor - E-commerce product page solution
+# Frontend Mentor - E-commerce Product
 
-This is a solution to the [E-commerce product page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/ecommerce-product-page-UPsZ9MJp6). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
+Esse Desadio pode ser encontrado em [E-commerce Product Challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/ecommerce-product-page-UPsZ9MJp6). Desafios do Frontend Mentor ajudam à melhorar e as Habilidades Tecnicas e Codar Projetos praticos e reais.
 
-## Table of contents
+## Tabela de Contaudos
 
+<!--TODO: Verificar o Topo "Quem, é Guilherme Palma" e "Continuação do Desenvolvimento"-->
 - [Overview](#overview)
-  - [The challenge](#the-challenge)
-  - [Screenshot](#screenshot)
+  - [O Desafio](#o-desafio)
+  - [Resultado](#resultado)
   - [Links](#links)
-- [My process](#my-process)
-  - [Built with](#built-with)
-  - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
-- [Author](#author)
+- [Meu Processo](#meu-processo)
+  - [Codado com](#codado-com)
+  - [O que eu Aprendi ?](#o-que-eu-aprendi)
+  - [Continuação do Desenvolvimento](#continuação-do-desenvolvimento)
+  - [Recursos Uteis](#recursos-uteis)
+- [Quem é Guilherme Palma](#quem-e-guilherme-palma)
 - [Acknowledgments](#acknowledgments)
 
 **Note: Delete this note and update the table of contents based on what sections you keep.**
 
-## Overview
+# Overview
 
-### The challenge
+## O Desafio
 
-Users should be able to:
+O Usuario deve poder:
 
-- View the optimal layout for the site depending on their device's screen size
-- See hover states for all interactive elements on the page
-- Open a lightbox gallery by clicking on the large product image
-- Switch the large product image by clicking on the small thumbnail images
-- Add items to the cart
-- View the cart and remove items from it
+- Ver o Layout Otimizado e sem problemas, independente da dimensão dos dispositivos
+- Ver as respostas UI ao clicar e interagir com os Elementos do APP
+- Adicionar, Alterar, Excluir e Visualizar os Itens bao Carrinho
 
-### Screenshot
+## Resultado
 
 ![](./screenshot.jpg)
 
@@ -43,14 +41,16 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 
 **Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
 
-### Links
+## Links
 
 - Solution URL: [Add solution URL here](https://your-solution-url.com)
 - Live Site URL: [Add live site URL here](https://your-live-site-url.com)
 
-## My process
+# Meu Processo
 
-### Built with
+## Codado com...
+
+- Dart e Flutter 
 
 - Semantic HTML5 markup
 - CSS custom properties
@@ -63,7 +63,7 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 
 **Note: These are just examples. Delete this note and replace the list above with your own choices**
 
-### What I learned
+## O que eu Aprendi ?
 
 Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
 
@@ -87,20 +87,25 @@ If you want more help with writing markdown, we'd recommend checking out [The Ma
 
 **Note: Delete this note and the content within this section and replace with your own learnings.**
 
-### Continued development
+## Continuação do Desenvolvimento
+
+- Abrir a Imagem em uma Resolução maior ao clicar
+- Tela de Exibição GEral dos Produtos
+- Obtenção dos Produtos via API
+- Adição de Itens no Carrinho 
 
 Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
 
 **Note: Delete this note and the content within this section and replace with your own plans for continued development.**
 
-### Useful resources
+## Recursos Uteis
 
 - [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
 - [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
 
 **Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
 
-## Author
+# Quem é Guilherme Palma
 
 - Website - [Add your name here](https://www.your-site.com)
 - Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
